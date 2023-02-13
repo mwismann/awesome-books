@@ -24,7 +24,7 @@
 
 # 📖 [awesome-books] <a name="about-project"></a>
 
-**[awesome-books]** is a collaborative work, which focuses on adding and removing books to and from a library using the DOM manipulation tecniques.
+**[awesome-books]** is a collaborative work, which focuses on adding and removing books to and from a library using the DOM manipulation techniques.
 
 ## 🛠 Built With <a name="built-with"></a>
 
