@@ -43,7 +43,7 @@ const addBook = () => {
     return;
   }
   const newBook = {
-    id: books.length + 1,
+    id: Math.floor((Math.random() * 1000) + 1),
     title: `${newBookTitle.value}`,
     author: `${newBookAuthor.value}`,
   };
