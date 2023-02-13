@@ -52,3 +52,10 @@ const addBook = () => {
   localStorage.setItem('books', JSON.stringify(books));
   renderBooksGrid();
 };
+
+// ----------- call func and listeners -----
+renderBooksGrid();
+addBookBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  addBook();
+});
