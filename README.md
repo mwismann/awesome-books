@@ -8,7 +8,6 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [Loom Walkthrough](#loom-walk)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -23,9 +22,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Awesome Books] <a name="about-project"></a>
+# 📖 [awesome-books] <a name="about-project"></a>
 
-**[Awesome Books]** is a collaborative work, which focuses on adding and removing books to and from a library using the DOM manipulation tecniques.
+**[awesome-books]** is a collaborative work, which focuses on adding and removing books to and from a library using the DOM manipulation tecniques.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -65,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- https://mwismann.github.io/first-capstone/
+- https://mwismann.github.io/awesome-books/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,7 +85,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone https://github.com/mwismann/awesome-books.git
 ```
-
 
 ### Install
 
@@ -122,8 +120,6 @@ Clone this repository to your desired folder:
 - GitHub: [Jord4N-AC](https://github.com/Jord4N-AC)
 - Twitter: [@jordan12AC](https://twitter.com/jordan12AC)
 - LinkedIn: [Camilo Armijos](https://www.linkedin.com/in/camilo-armijos-2b9648197)
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
