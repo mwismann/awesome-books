@@ -50,6 +50,9 @@ const addBook = () => {
 
   books.push(newBook);
   localStorage.setItem('books', JSON.stringify(books));
+
+  newBookTitle.value = '';
+  newBookAuthor.value = '';
   renderBooksGrid();
 };
 
