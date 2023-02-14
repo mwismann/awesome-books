@@ -45,7 +45,7 @@ class Book {
             <span>by</span>
             <p>${book.author}</p>
           </div>
-            <button class="remove-book" data-id="${book.id}">Remove</button>
+            <button class="remove-book btn" data-id="${book.id}">Remove</button>
           </article>`);
     });
 

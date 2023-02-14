@@ -48,12 +48,42 @@ h1 {
   font-size: 1rem;
 }
 
-.remove-book {
+.btn {
   font-size: 1.25rem;
   padding: 0.5rem 1rem;
   box-shadow: 3px 3px 2px 0 rgb(0, 0, 0);
 }
 
-.remove-book:hover {
+.btn:hover {
   cursor: pointer;
+}
+
+#divider {
+  width: 15%;
+  border-top: 3px solid black;
+  border-radius: 50%;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+}
+
+.form-group {
+  width: 100%;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+}
+
+form > button {
+  align-self: flex-end;
 }
