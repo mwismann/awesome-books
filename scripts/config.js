@@ -44,7 +44,7 @@ const addBook = () => {
   }
 
   const newBook = {
-    id: Math.floor((Math.random() * 1000) + 1), // add something to prevent id repetition
+    id: Math.floor((Math.random() * Date.now())),
     title: `${newBookTitle.value}`,
     author: `${newBookAuthor.value}`,
   };
