@@ -39,11 +39,12 @@ const renderBooksGrid = () => {
 };
 
 const addBook = () => {
-  if (newBookTitle.value === '' || newBookAuthor.value === '') {
+  if (newBookTitle.value.trim() === '' || newBookAuthor.value.trim() === '') {
     return;
   }
+
   const newBook = {
-    id: Math.floor((Math.random() * 1000) + 1),
+    id: Math.floor((Math.random() * Date.now())),
     title: `${newBookTitle.value}`,
     author: `${newBookAuthor.value}`,
   };
