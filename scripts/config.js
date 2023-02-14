@@ -1,5 +1,26 @@
-// -------------- Objects --------------------
-let books = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+class Book {
+  constructor (id, title, author) {
+    this.id = id
+    this.title = title
+    this.author = author
+  }
+
+  static books = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+
+  addBook() {
+    if (newBookTitle.value.trim() === '' || newBookAuthor.value.trim() === '') {
+      return;
+    }
+  
+    Book.books.push(this);
+    localStorage.setItem('books', JSON.stringify(Book.books));
+  
+    newBookTitle.value = '';
+    newBookAuthor.value = '';
+    renderBooksGrid();
+  };
+}
+
 
 // ------------- book grid var ----------------
 const booksGrid = document.getElementById('books-grid');
@@ -12,7 +33,7 @@ const addBookBtn = document.getElementById('add-book');
 // ------------ functions -----------------------
 const renderBooksGrid = () => {
   booksGrid.innerHTML = '';
-  books.forEach((book) => {
+  Book.books.forEach((book) => {
     booksGrid.insertAdjacentHTML('beforeend',
       `<article>
             <h2>${book.title}</h2>
@@ -27,8 +48,8 @@ const renderBooksGrid = () => {
 
   // ------------ remove book Func ---------------
   const removeBook = (id) => {
-    books = books.filter((book) => book.id !== +id);
-    localStorage.setItem('books', JSON.stringify(books));
+    Book.books = Book.books.filter((book) => book.id !== +id);
+    localStorage.setItem('books', JSON.stringify(Book.books));
     renderBooksGrid();
   };
 
@@ -38,28 +59,11 @@ const renderBooksGrid = () => {
   }));
 };
 
-const addBook = () => {
-  if (newBookTitle.value.trim() === '' || newBookAuthor.value.trim() === '') {
-    return;
-  }
-
-  const newBook = {
-    id: Math.floor((Math.random() * Date.now())),
-    title: `${newBookTitle.value}`,
-    author: `${newBookAuthor.value}`,
-  };
-
-  books.push(newBook);
-  localStorage.setItem('books', JSON.stringify(books));
-
-  newBookTitle.value = '';
-  newBookAuthor.value = '';
-  renderBooksGrid();
-};
-
 // ----------- call func and listeners -----
 renderBooksGrid();
 addBookBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  addBook();
+  const newBook = new Book(
+    Math.floor((Math.random() * Date.now())), newBookTitle.value, newBookAuthor.value)
+  newBook.addBook();
 });
