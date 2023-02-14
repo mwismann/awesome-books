@@ -39,11 +39,13 @@ class Book {
     booksGrid.innerHTML = '';
     Book.books.forEach((book) => {
       booksGrid.insertAdjacentHTML('beforeend',
-        `<article>
-              <h2>${book.title}</h2>
-              <p>${book.author}</p>
-              <button class="remove-book" data-id="${book.id}">Remove</button>
-              <hr>
+        `<article class="book-item">
+          <div class="item-meta">
+            <h2>"${book.title}"</h2>
+            <span>by</span>
+            <p>${book.author}</p>
+          </div>
+            <button class="remove-book" data-id="${book.id}">Remove</button>
           </article>`);
     });
 
