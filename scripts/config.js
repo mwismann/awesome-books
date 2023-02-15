@@ -1,8 +1,5 @@
 // ------------- main and nav variables ------------
-const goToBooks = document.getElementById('go-to-books');
-const goToAdd = document.getElementById('go-to-add');
-const goToContact = document.getElementById('go-to-contact');
-const mainContainer = document.querySelector('main');
+const navLinks = document.querySelectorAll('.nav-link');
 const headline = document.querySelector('h1');
 const sections = document.querySelectorAll('.section');
 
@@ -14,9 +11,6 @@ const form = document.querySelector('form');
 const newBookTitle = document.getElementById('new-title');
 const newBookAuthor = document.getElementById('new-author');
 const addBookBtn = document.getElementById('add-book');
-
-// ------------- contact section -------------------
-const contactSection = document.getElementById('contact-section');
 
 // ------------- Classes ---------------------------
 class Book {
@@ -87,6 +81,9 @@ const renderContent = (currSection) => {
 };
 // ------------- call func and listeners -----------
 new Book().renderBooksGrid();
+navLinks.forEach((link) => link.addEventListener('click', (e) => {
+  renderContent(e.target.dataset.link);
+}));
 addBookBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const newBook = new Book(
