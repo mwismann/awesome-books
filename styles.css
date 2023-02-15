@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  letter-spacing: 0.01rem;
 
   --brand-color-main: rgb(98, 130, 130);
   --brand-color-secondary: rgb(78, 180, 150);
@@ -28,35 +29,13 @@ header {
   padding: 1rem 1.5rem;
 }
 
-.logo-container {
-  background-color: var(--bg-color-main);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-}
-
-.logo-container:hover {
-  background-color: white;
-  cursor: pointer;
+li a {
+  color: var(--brand-color-main);
 }
 
 .logo-container a {
   font-weight: bolder;
   text-shadow: 0 3px rgba(98, 130, 130, 0.556);
-}
-
-.logo-container:hover a {
-  color: var(--bg-color-main);  
-}
-
-nav > ul {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-}
-
-li a  {
-  color: var(--brand-color-main);
 }
 
 li a:hover {
@@ -69,15 +48,37 @@ li a:active {
   color: white;
 }
 
+.logo-container {
+  background-color: var(--bg-color-main);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.logo-container:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
 li:nth-child(2) a {
   border-left: 2px solid white;
   border-right: 2px solid white;
   padding: 0 1rem;
 }
 
+.logo-container:hover a {
+  color: var(--bg-color-main);
+}
+
 main {
   width: 100%;
-  min-height: 82vh;
+  min-height: 83vh;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -195,15 +196,16 @@ form > button {
   align-self: flex-end;
 }
 
-
 /* --------- Contact Section ---------- */
 #contact-section {
+  width: 80%;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
-  width: 80%;
+  font-size: 1.25rem;
 }
 
 #contact-section ul {
