@@ -17,22 +17,20 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Add New</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="go-to-books" onclick="renderContent('#books-grid')">Books</a></li>
+                <li><a href="#" id="go-to-add" onclick="renderContent('form')">Add New</a></li>
+                <li><a href="#" id="go-to-contact" onclick="renderContent('#contact-section')">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <!-- <h1>All awesome books</h1> -->
-        <!-- <h1>Add a new Book</h1> -->
-        <h1>Contact Information</h1>
+        <h1>All awesome books</h1>
     
-        <section id="books-grid">
+        <section id="books-grid" class="section active">
         </section>
     
-        <form action="/">
+        <form action="/" class="section">
             <div class="form-group">
                 <input type="text" name="title" id="new-title" placeholder="Title">
             </div>
@@ -42,7 +40,7 @@
             <button class="btn" id="add-book">Add</button>
         </form>
     
-        <section id="contact-section">
+        <section id="contact-section" class="section">
             <p>Do you have any other questions or you just wan to say "Hello"?</p>
             <p>You can reach out to us!</p>
             <ul>

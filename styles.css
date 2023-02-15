@@ -78,7 +78,7 @@ li:nth-child(2) a {
 
 main {
   width: 100%;
-  min-height: 83vh;
+  min-height: 82.8vh;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -98,6 +98,10 @@ h1 {
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 0.25rem;
+}
+
+#books-grid.active {
+  display: block;
 }
 
 .book-item {
@@ -175,6 +179,10 @@ form {
   width: 50%;
 }
 
+form.active {
+  display: flex;
+}
+
 .form-title {
   font-size: 1.25rem;
   text-shadow: 0 3px rgba(98, 130, 130, 0.556);
@@ -198,14 +206,18 @@ form > button {
 
 /* --------- Contact Section ---------- */
 #contact-section {
-  width: 80%;
+  width: 70%;
   padding-top: 2rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
   font-size: 1.25rem;
+}
+
+#contact-section.active {
+  display: flex;
 }
 
 #contact-section ul {

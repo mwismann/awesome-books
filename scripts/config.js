@@ -1,12 +1,24 @@
-// ------------- book grid var ----------------
+// ------------- main and nav variables ------------
+const goToBooks = document.getElementById('go-to-books');
+const goToAdd = document.getElementById('go-to-add');
+const goToContact = document.getElementById('go-to-contact');
+const mainContainer = document.querySelector('main');
+const headline = document.querySelector('h1');
+const sections = document.querySelectorAll('.section');
+
+// ------------- book grid section -----------------
 const booksGrid = document.getElementById('books-grid');
 
-// ------------ add book form vars -------------
+// ------------- new book form section -------------
+const form = document.querySelector('form');
 const newBookTitle = document.getElementById('new-title');
 const newBookAuthor = document.getElementById('new-author');
 const addBookBtn = document.getElementById('add-book');
 
-// ----------- Classes ------------------------
+// ------------- contact section -------------------
+const contactSection = document.getElementById('contact-section');
+
+// ------------- Classes ---------------------------
 class Book {
   constructor(id, title, author) {
     this.id = id;
@@ -27,6 +39,8 @@ class Book {
     newBookTitle.value = '';
     newBookAuthor.value = '';
     this.renderBooksGrid();
+    form.classList.remove('active');
+    booksGrid.classList.add('active');
   }
 
   removeBook(id) {
@@ -59,7 +73,19 @@ class Book {
   }
 }
 
-// ----------- call func and listeners -----
+// ------------- functions -------------------------
+const renderContent = (currSection) => {
+  sections.forEach((section) => section.classList.remove('active'));
+  document.querySelector(`${currSection}`).classList.add('active');
+  if (currSection === '#books-grid') {
+    headline.textContent = 'All awesome books';
+  } else if (currSection === 'form') {
+    headline.textContent = 'Add a new Book';
+  } else {
+    headline.textContent = 'Contact Information';
+  }
+};
+// ------------- call func and listeners -----------
 new Book().renderBooksGrid();
 addBookBtn.addEventListener('click', (e) => {
   e.preventDefault();
