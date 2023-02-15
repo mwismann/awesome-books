@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  letter-spacing: 0.01rem;
 
   --brand-color-main: rgb(98, 130, 130);
   --brand-color-secondary: rgb(78, 180, 150);
@@ -11,25 +12,96 @@
 }
 
 body {
+  background-color: var(--bg-color-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------- Header and Navbar ----------- */
+header {
+  background-color: rgba(0, 0, 0, 0.88);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+li a {
+  color: var(--brand-color-main);
+}
+
+.logo-container a {
+  font-weight: bolder;
+  text-shadow: 0 3px rgba(98, 130, 130, 0.556);
+}
+
+li a:hover {
+  color: var(--brand-color-secondary);
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(225, 225, 225, 0.5);
+  cursor: pointer;
+}
+
+li a:active {
+  color: white;
+}
+
+.logo-container {
+  background-color: var(--bg-color-main);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.logo-container:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+li:nth-child(2) a {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 0 1rem;
+}
+
+.logo-container:hover a {
+  color: var(--bg-color-main);
+}
+
+main {
+  width: 100%;
+  min-height: 82.8vh;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  background-color: var(--bg-color-main);
 }
 
 h1 {
-  margin-top: 1rem;
   font-size: 3rem;
   text-shadow: 0 5px rgba(98, 130, 130, 0.556);
 }
 
 #books-grid {
+  display: none;
   width: 90%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 0.25rem;
+}
+
+#books-grid.active {
+  display: block;
 }
 
 .book-item {
@@ -96,14 +168,19 @@ h1 {
   border-radius: 50%;
 }
 
-/* Form */
+/* --------- Form ------------ */
 form {
-  display: flex;
+  padding-top: 2rem;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 50%;
+}
+
+form.active {
+  display: flex;
 }
 
 .form-title {
@@ -117,7 +194,7 @@ form {
 
 input {
   font-size: 16px;
-  padding: 8px;
+  padding: 12px;
   width: 100%;
   color: var(--brand-color-main);
   border-radius: 0.25rem;
@@ -125,4 +202,36 @@ input {
 
 form > button {
   align-self: flex-end;
+}
+
+/* --------- Contact Section ---------- */
+#contact-section {
+  width: 70%;
+  padding-top: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#contact-section.active {
+  display: flex;
+}
+
+#contact-section ul {
+  padding-left: 5%;
+  margin-top: 1rem;
+}
+
+/* --------- Footer ----------------- */
+footer {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.88);
 }
