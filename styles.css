@@ -52,9 +52,6 @@ nav > ul {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-ul {
   list-style: none;
 }
 
@@ -201,7 +198,17 @@ form > button {
 
 /* --------- Contact Section ---------- */
 #contact-section {
-  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+#contact-section ul {
+  padding-left: 5%;
+  margin-top: 1rem;
 }
 
 /* --------- Footer ----------------- */
